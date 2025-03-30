@@ -3,7 +3,9 @@ import axios from 'axios'
 import { BsCheckLg } from 'react-icons/bs'
 import { UseAppContext } from '../context'
 
-const url = `https://api.unsplash.com/search/photos?client_id=&query=`
+const url = `https://api.unsplash.com/search/photos?client_id=${
+  import.meta.env.VITE_API_KEY
+}&query=`
 
 const Gallery = () => {
   const { searchTerm } = UseAppContext()
